@@ -1,0 +1,43 @@
+Describe "API Smoke Tests" {
+	$baseUrl = "https://localhost:7027"
+	$healthEndpoint = "$baseUrl/health"
+	It "API root responds with 200 OK" { 
+		$response = Invoke-WebRequest -Uri $healthEndpoint -Method Get -ErrorAction Stop 
+		$response.StatusCode | Should -Be 200 
+		$response.Content | Should -Be "Healthy"
+	}
+	
+	
+	BeforeAll {
+		$maxAttempts = 10
+		$delaySeconds = 3
+		$attempt = 1
+		$apiReady = $false
+		
+		Write-Host "Waiting for API to become available at $healthEndpoint"
+		
+		while ($attempt -le $maxAttempts -and -not $apiReady) {
+			try {
+				$response = Invoke-WebRequest -Uri $healthEndpoint -Method Get 
+				if ($response.StatusCode -eq 200) {
+					Write-Host "API is up after $attempt attempt(s)"
+					$apiReady = $true
+					break
+				}
+			}
+			catch {
+				Write-Host "attempt $attempt : API not ready yet"
+			}
+			
+			if (-not $apiReady) {
+				Start-Sleep -Seconds $delaySeconds
+			}
+			$attempt++
+		}
+		if (-not $apiReady){
+			throw "API did not become ready after $maxAttempts attempts"
+		}
+	}
+
+
+}

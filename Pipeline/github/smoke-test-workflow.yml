@@ -1,0 +1,58 @@
+name: CI - Smoke Test
+
+on:
+	push:
+		branches: [ main, master ]
+	pull_request:
+		branches: [ main, master ]
+
+jobs:
+	build:
+		runs-on: windows-latest
+		steps:
+			- name: Checkout
+				uses: actions/checkout@v4
+
+			- name: Bootstrap (install prerequisites)
+				shell: pwsh
+				run: |
+					pwsh -NoProfile -ExecutionPolicy Bypass -File ./Pipeline/scripts/00-boostrap.ps1
+
+			- name: Build
+				shell: pwsh
+				run: |
+					pwsh -NoProfile -ExecutionPolicy Bypass -File ./Pipeline/scripts/01-build.ps1
+
+			- name: Start API (background)
+				id: start_api
+				shell: pwsh
+				run: |
+					Write-Host 'Starting API in background (script will write PID to build/api.pid)'
+					pwsh -NoProfile -ExecutionPolicy Bypass -File ./Pipeline/scripts/02-run.ps1
+
+			- name: Run tests
+				shell: pwsh
+				run: |
+					pwsh -NoProfile -ExecutionPolicy Bypass -File ./Pipeline/scripts/03-test.ps1
+
+			- name: Cleanup (stop API)
+				if: always()
+				shell: pwsh
+				run: |
+					Write-Host 'Running cleanup script'
+					pwsh -NoProfile -ExecutionPolicy Bypass -File ./Pipeline/scripts/99-cleanup.ps1
+
+			- name: Upload published artifact
+				if: always()
+				uses: actions/upload-artifact@v4
+				with:
+					name: published-app
+					path: build/publish
+
+			- name: Upload test results
+				if: always()
+				uses: actions/upload-artifact@v4
+				with:
+					name: test-results
+					path: build/test-results
+

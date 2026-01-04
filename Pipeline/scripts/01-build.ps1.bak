@@ -1,0 +1,7 @@
+Write-Host "Restoring dependencies..."
+dotnet restore
+
+Write-Host "Building solution..."
+dotnet build --configuration Release
+
+
