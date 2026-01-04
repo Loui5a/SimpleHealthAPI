@@ -1,34 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="14c61b0a-01cd-4af2-bb6a-c032d3661537" name="louis@DESKTOP-BR73B8A 2026-01-04 22:43:51" runUser="DESKTOP-BR73B8A\louis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2026-01-04T22:43:51.8800258+01:00" queuing="2026-01-04T22:43:51.8800262+01:00" start="2026-01-04T22:43:40.7512254+01:00" finish="2026-01-04T22:43:51.8847842+01:00" />
-  <TestSettings name="default" id="dc516629-db1f-422a-b1b2-80eb712a174e">
-    <Deployment runDeploymentRoot="louis_DESKTOP-BR73B8A_2026-01-04_22_43_51" />
+<TestRun id="ccd96de6-326c-4312-8160-6a41c3087c09" name="louis@DESKTOP-BR73B8A 2026-01-04 22:52:05" runUser="DESKTOP-BR73B8A\louis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-01-04T22:52:05.2202223+01:00" queuing="2026-01-04T22:52:05.2202226+01:00" start="2026-01-04T22:51:54.1326674+01:00" finish="2026-01-04T22:52:05.2238121+01:00" />
+  <TestSettings name="default" id="99192f91-5215-4325-8345-fb4a8f005661">
+    <Deployment runDeploymentRoot="louis_DESKTOP-BR73B8A_2026-01-04_22_52_05" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="e34e9fc7-be9a-43bf-a43c-c8529ffe5df0" testId="168e4dd4-735d-4e0a-d9da-b57a754234a5" testName="Api_Boots_WithinOneMinute_HealthEndpointBecomesHealthy" computerName="DESKTOP-BR73B8A" duration="00:00:10.4281810" startTime="2026-01-04T22:43:41.3421377+01:00" endTime="2026-01-04T22:43:51.7702072+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e34e9fc7-be9a-43bf-a43c-c8529ffe5df0">
+    <UnitTestResult executionId="f1e104fd-9a00-42bb-9b8a-a54bb359d7d5" testId="168e4dd4-735d-4e0a-d9da-b57a754234a5" testName="Api_Boots_WithinOneMinute_HealthEndpointBecomesHealthy" computerName="DESKTOP-BR73B8A" duration="00:00:10.4086390" startTime="2026-01-04T22:51:54.7080449+01:00" endTime="2026-01-04T22:52:05.1166198+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1e104fd-9a00-42bb-9b8a-a54bb359d7d5">
       <Output>
         <StdOut>info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]&#xD;
       Failed to determine the https port for redirect.&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.5722ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 1.1606ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0321ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0391ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0079ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0073ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.011ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0055ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0043ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0048ms with message 'Application is still starting up'&#xD;
+info: CodingTestEverllence.Program[0]&#xD;
+      Health endpoint was called: /health&#xD;
+fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0077ms with message 'Application is still starting up'&#xD;
+info: CodingTestEverllence.Program[0]&#xD;
+      Health endpoint was called: /health&#xD;
+fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0048ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
@@ -36,19 +44,11 @@ fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[10
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0062ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0177ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.011ms with message 'Application is still starting up'&#xD;
-info: CodingTestEverllence.Program[0]&#xD;
-      Health endpoint was called: /health&#xD;
-fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0051ms with message 'Application is still starting up'&#xD;
-info: CodingTestEverllence.Program[0]&#xD;
-      Health endpoint was called: /health&#xD;
-fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0322ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0142ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health</StdOut>
       </Output>
@@ -56,12 +56,12 @@ info: CodingTestEverllence.Program[0]&#xD;
   </Results>
   <TestDefinitions>
     <UnitTest name="Api_Boots_WithinOneMinute_HealthEndpointBecomesHealthy" storage="c:\users\louis\documents\repo\codingchallenge\simplehealthapi\codingtesteverllence.test\bin\release\net8.0\codingtesteverllence.test.dll" id="168e4dd4-735d-4e0a-d9da-b57a754234a5">
-      <Execution id="e34e9fc7-be9a-43bf-a43c-c8529ffe5df0" />
+      <Execution id="f1e104fd-9a00-42bb-9b8a-a54bb359d7d5" />
       <TestMethod codeBase="C:\Users\louis\Documents\Repo\CodingChallenge\SimpleHealthAPI\CodingTestEverllence.Test\bin\Release\net8.0\CodingTestEverllence.Test.dll" adapterTypeName="executor://nunit3testexecutor/" className="CodingTestEverllence.Test.HealthEndpointBootTests" name="Api_Boots_WithinOneMinute_HealthEndpointBecomesHealthy" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="168e4dd4-735d-4e0a-d9da-b57a754234a5" executionId="e34e9fc7-be9a-43bf-a43c-c8529ffe5df0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="168e4dd4-735d-4e0a-d9da-b57a754234a5" executionId="f1e104fd-9a00-42bb-9b8a-a54bb359d7d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -77,29 +77,37 @@ NUnit Adapter 4.5.0.0: Test execution complete&#xD;
 </StdOut>
     </Output>
     <RunInfos>
-      <RunInfo computerName="DESKTOP-BR73B8A" outcome="Warning" timestamp="2026-01-04T22:43:51.7934850+01:00">
+      <RunInfo computerName="DESKTOP-BR73B8A" outcome="Warning" timestamp="2026-01-04T22:52:05.1312110+01:00">
         <Text>info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]&#xD;
       Failed to determine the https port for redirect.&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.5722ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 1.1606ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0321ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0391ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0079ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0073ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.011ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0055ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0043ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0048ms with message 'Application is still starting up'&#xD;
+info: CodingTestEverllence.Program[0]&#xD;
+      Health endpoint was called: /health&#xD;
+fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0077ms with message 'Application is still starting up'&#xD;
+info: CodingTestEverllence.Program[0]&#xD;
+      Health endpoint was called: /health&#xD;
+fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0048ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
@@ -107,19 +115,11 @@ fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[10
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0062ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0177ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.011ms with message 'Application is still starting up'&#xD;
-info: CodingTestEverllence.Program[0]&#xD;
-      Health endpoint was called: /health&#xD;
-fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0051ms with message 'Application is still starting up'&#xD;
-info: CodingTestEverllence.Program[0]&#xD;
-      Health endpoint was called: /health&#xD;
-fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]&#xD;
-      Health check startup_delay with status Unhealthy completed after 0.0322ms with message 'Application is still starting up'&#xD;
+      Health check startup_delay with status Unhealthy completed after 0.0142ms with message 'Application is still starting up'&#xD;
 info: CodingTestEverllence.Program[0]&#xD;
       Health endpoint was called: /health&#xD;
 </Text>
