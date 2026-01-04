@@ -11,21 +11,23 @@ namespace CodingTestEverllence
 
             var appStartupTime = DateTime.UtcNow;
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            // Adding health checks with a startup delay to mock a real application startup time:
             builder.Services.AddHealthChecks()
                 .AddCheck("startup_delay", () =>
                 {
                     var uptime = DateTime.UtcNow -appStartupTime;
-                    if ( uptime < TimeSpan.FromSeconds(30))
+                    if ( uptime < TimeSpan.FromSeconds(10))
                     {
                         return Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckResult.Unhealthy("Application is still starting up");
                     }
                     return Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckResult.Healthy("Application is ready");
                 });
-            
+            // Left controlers in for more realistic app structure.
+            builder.Services.AddControllers();
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -38,6 +40,7 @@ namespace CodingTestEverllence
             {
                 if (context.Request.Path == "/health")
                 {
+                    // Add logging for health endpoint calls:
                     var logger = context.RequestServices.GetRequiredService<ILogger<Program>>(); 
                     logger.LogInformation("Health endpoint was called: {Path}", context.Request.Path);
                 }
