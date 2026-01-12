@@ -33,7 +33,7 @@ else {
 Write-Host "Starting API on $url (silent mode: stdout/stderr -> build/logs)"
 
 # Ensure output directories exist
-$buildDir = Join-Path (Resolve-Path ..\..).Path 'build'
+$buildDir = Join-Path (Resolve-Path .).Path 'build'
 if (-not (Test-Path $buildDir)) { New-Item -ItemType Directory -Path $buildDir | Out-Null }
 $logsDir = Join-Path $buildDir 'logs'
 if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Path $logsDir | Out-Null }

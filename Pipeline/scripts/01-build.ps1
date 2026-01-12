@@ -4,7 +4,7 @@ Write-Host "Restoring dependencies..."
 dotnet restore
 
 Write-Host "Building solution..."
-dotnet build --configuration Release
+dotnet buildcd --configuration Release
 
 Write-Host "Run unit tests..."
 # Ensure test results directory exists and write TRX there so CI can upload them
