@@ -46,6 +46,6 @@ namespace CodingTestEverllence.Test
             }
 
             Assert.That(becameHealthy, Is.True, $"The health endpoint did not report healthy within {timeout.TotalSeconds} seconds. Last status: {lastResponse?.StatusCode.ToString() ?? "no response"}");
-        }
+        } 
     }
 }

@@ -1,6 +1,6 @@
 Write-Host "Starting API..."
 
-# Read pipeline config (ApiPort and UseHttps) or fall back to environment variables
+# Read pipeline config (ApiPort and UseHttps) or fall back to environment variables 
 $configPath = Join-Path (Resolve-Path ..\..).Path 'Pipeline\pipeline.config.json'
 $port = $env:API_PORT
 $useHttps = $env:API_HTTPS
@@ -15,6 +15,7 @@ if (-not $useHttps) { $useHttps = $false }
 
 if ($useHttps -eq $true -or $useHttps -eq 'true') {
 	# In CI we avoid interactive trust operations. If running in CI, fall back to HTTP to keep the run non-interactive.
+	# consider throwing an exception here, as user input is https but we are unable to provide https in CI.
 	if ($env:GITHUB_ACTIONS -or $env:CI) {
 		Write-Host "CI environment detected; skipping interactive dev-certs trust. Using HTTP for CI runs."
 		$url = "http://localhost:$port"
@@ -37,8 +38,8 @@ if (-not (Test-Path $buildDir)) { New-Item -ItemType Directory -Path $buildDir |
 $logsDir = Join-Path $buildDir 'logs'
 if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Path $logsDir | Out-Null }
 
-$stdoutFile = Join-Path $logsDir 'api.stdout.log'
-$stderrFile = Join-Path $logsDir 'api.stderr.log'
+$stdoutFile = Join-Path $logsDir 'api.stdout.log' # Standard output log file
+$stderrFile = Join-Path $logsDir 'api.stderr.log' # Standard error log file
 
 # Start the process hidden and redirect output to log files so it runs silently
 $argList = @('run','--project','./CodingTestEverllence','--urls',$url)

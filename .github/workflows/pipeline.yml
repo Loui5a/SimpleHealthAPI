@@ -1,4 +1,4 @@
-name: CI - Smoke Test
+name: pipeline
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: Checkout
+      - name: Checkout 
         uses: actions/checkout@v4
 
       - name: Bootstrap (install prerequisites)
@@ -55,3 +55,10 @@ jobs:
         with:
           name: test-results
           path: build/test-results
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs  
+          path: build/logs
